@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.*;
 
+//AuthenticationService ile de MemberRepository, RoleRepository ve PasswordEncoder ile üye kaydı yapıyoruz.
 @Service
 public class AuthenticationService {
 

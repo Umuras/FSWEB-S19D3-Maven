@@ -19,6 +19,7 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 public class SecurityConfig {
 
+    //Passwordun nasıl encoder olacağını belirliyoruz.
     @Bean
     public PasswordEncoder passwordEncoder()
     {
@@ -36,6 +37,7 @@ public class SecurityConfig {
     }
 
     //Nasıl security yönettiğimiz yer oluyor burası.
+    //Hangi kullanıcının hangi requesti yapabileceğinin iznini ayarlıyoruz.
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception{
         return httpSecurity.csrf(csrf -> csrf.disable())

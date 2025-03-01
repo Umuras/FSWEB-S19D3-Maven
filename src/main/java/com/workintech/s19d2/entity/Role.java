@@ -11,6 +11,8 @@ import org.springframework.security.core.GrantedAuthority;
 @Data
 @Entity
 @Table(name = "role", schema = "bank")
+//GrantedAuthority getAuthorities methodu içeriyor ama Lombok zaten onu yazdığı için Override etmemize gerek yok
+//Bu şekilde memberın hangi role sahip olduğunu getiriyoruz.
 public class Role implements GrantedAuthority {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

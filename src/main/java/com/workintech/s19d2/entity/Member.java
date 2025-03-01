@@ -14,6 +14,8 @@ import java.util.*;
 @Data
 @Entity
 @Table(name = "member", schema = "bank")
+//UserDetails interfacei memberın username, password bilgisini getiren ve memberın sisteme giriş yapıp yapamayacağını
+//belirleyen methodlar içeriyor.
 public class Member implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

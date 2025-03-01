@@ -6,6 +6,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
+//MemberService'de memberRepository ile o kullanıcının var olup olmadığını kontrol ediyoruz. Logic işlemleri gerçekleş-
+//tiriyoruz.
 public class MemberService implements UserDetailsService {
     private MemberRepository memberRepository;
 
@@ -18,7 +20,7 @@ public class MemberService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         return memberRepository.findByEmail(username).orElseThrow(() -> {
-            throw new UsernameNotFoundException("User with given email already exist");
+            throw new UsernameNotFoundException("Username not found!");
         });
     }
 }

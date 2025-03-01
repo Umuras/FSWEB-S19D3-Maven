@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+//AuthController üzerinden de endpoint üzerinden kişi kaydı yapıyoruz.
+//AuthenticationService kullanarak register methodunu çalıştırıyoruz.
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
